@@ -1,0 +1,143 @@
+.container {
+  font-size: 13px;
+  position: relative;
+  width: 43.75em;
+  height: 43.75em;
+  background-color: #585858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sadako {
+  font-size: 1.556em;
+  position: relative;
+  left: -3.5625em;
+  top: -0.5em;
+  width: 6.3125em;
+  height: 16.3125em;
+  background-color: #cec8b8;
+  border-radius: 1.875em 1.875em 0 0;
+  z-index: 1;
+}
+.sadako::before {
+  content: "";
+  position: absolute;
+  background-color: #cec8b8;
+  width: 2.125em;
+  height: 4.375em;
+  right: -1.25em;
+  top: 5.85em;
+  transform: rotate(-15deg);
+  border-radius: 0 1.25em 0 0;
+}
+.sadako::after {
+  content: "";
+  position: absolute;
+  top: 9.6875em;
+  width: 2.1875em;
+  height: 3.4375em;
+  background-color: #f1e8e3;
+  border-radius: 0 0 2.1875em 2.1875em;
+  right: -1.875em;
+  z-index: -1;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(100% - 1.125em), calc(100% - 0.9375em) calc(100% - 1.125em), calc(100% - 0.9375em) 0);
+}
+
+.sadako__head {
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+  height: 13em;
+  background: linear-gradient(#000000 6em, #cec8b8 0);
+  border-radius: inherit;
+  z-index: 1;
+}
+.sadako__head::before {
+  content: "";
+  position: absolute;
+  width: 1.375em;
+  height: inherit;
+  color: #000000;
+  background-color: currentColor;
+  border-radius: 0 0 1.375em 0;
+  box-shadow: 1.3125em 0, calc((1.375em * 2) + 0.875em) -3.75em;
+}
+.sadako__head::after {
+  content: "";
+  position: absolute;
+  height: 1.6875em;
+  width: 0.9375em;
+  background-color: #f5eae6;
+  top: calc(6em - 1.6875em);
+  left: 2.6875em;
+  border-radius: 0.9375em 0 0 0;
+  z-index: -1;
+}
+
+.sadako__feet {
+  position: absolute;
+  right: 0;
+  width: 1.375em;
+  height: 1.6875em;
+  color: #f1e8e3;
+  background-color: currentColor;
+  bottom: -1.625em;
+  z-index: -1;
+  box-shadow: -2.1875em 0;
+}
+.sadako__feet::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.5625em;
+  height: 1.1875em;
+  background-color: inherit;
+  border-radius: 1.1875em 0 0 1.1875em;
+  box-shadow: inherit;
+}
+
+.sadako__tv {
+  position: absolute;
+  width: 7em;
+  height: 5.75em;
+  bottom: -1.625em;
+  right: -8.125em;
+  background-color: #000000;
+  z-index: -1;
+}
+.sadako__tv::before {
+  content: "";
+  position: absolute;
+  width: 1.1875em;
+  height: 5em;
+  bottom: 0;
+  right: -0.9375em;
+  background-color: inherit;
+  clip-path: polygon(0 0, 100% 0.6875em, 100% 100%, 0 100%);
+}
+
+.sadako__tvScreen {
+  display: block;
+  width: 5.6875em;
+  height: 4.5625em;
+  border: 0.75em solid #3b3b3b;
+  box-sizing: border-box;
+}
+.sadako__tvScreen::before {
+  content: "";
+  display: block;
+  float: right;
+  height: 100%;
+  width: 3.625em;
+  border-radius: 0.625em 0 0 0.625em;
+  background: repeating-linear-gradient(#6f6f6f, #6f6f6f 0.0625em, #929292 0.0625em, #929292 0.1875em, #797979 0.1875em, #797979 0.25em, #8e8e90 0.25em, #8e8e90 0.3125em, #98989a 0.3125em, #98989a 0.375em, #aaaaaa 0.375em, #aaaaaa 0.4375em);
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+}
